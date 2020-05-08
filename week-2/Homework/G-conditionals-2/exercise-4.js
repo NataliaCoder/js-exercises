@@ -9,9 +9,12 @@
 */
 
 function containsCode(sentence) {
-
+if sentence.contains("code") {
+  return "true";
+} 
+return "false";
 }
-
+let sentence = sentence1;
 /* 
 DO NOT EDIT BELOW THIS LINE
 --------------------------- */
