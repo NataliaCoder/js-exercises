@@ -6,15 +6,16 @@
   - otherwise return false
 
   Hint: Google how to check if a string contains a word
-*/
 
-function containsCode(sentence) {
-if sentence.contains("code") {
+  */
+
+function containsCode(x) {
+if (x.includes("code")) {
   return "true";
 } 
 return "false";
 }
-let sentence = sentence1;
+
 /* 
 DO NOT EDIT BELOW THIS LINE
 --------------------------- */
