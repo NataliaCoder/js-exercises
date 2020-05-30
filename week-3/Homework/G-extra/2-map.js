@@ -1,8 +1,13 @@
 /*
-  Only students who have attended enough classes are eligible to sit an exam.
-  You have an array named `attendanceCounts`  which contains all the students' names and their attendance counts.
-  Using .filter() and .map(), create a new array named "eligibleStudentNames" containing:
-  - only the NAMES of the students who have attended AT LEAST 8 classes.
+  Only students who have attended enough classes are eligible 
+  
+  to sit an exam.
+  You have an array named `attendanceCounts`  which contains 
+  all the students' names and their attendance counts.
+  Using .filter() and .map(), create a new array named 
+  "eligibleStudentNames" containing:
+  - only the NAMES of the students who have attended AT 
+  LEAST 8 classes.
 */
 
 var attendanceCounts = [
@@ -13,9 +18,14 @@ var attendanceCounts = [
   ["Tayoa", 11],
   ["Nina", 10]
 ];
+//[name, number]
+var eligibleStudentNames = attendanceCounts
+.filter((att) => att[1]>=8)
+.map((name) => name[0]);
 
-var eligibleStudentNames; // TODO: Complete this line.
 
+ // TODO: Complete this line.
+console.log();
 console.log(eligibleStudentNames);
 
 /* expected output

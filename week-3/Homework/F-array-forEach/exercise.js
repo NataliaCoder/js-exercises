@@ -8,6 +8,41 @@
 */
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+let b = arr.map(function(abra) {
+return abra*2;
+});
+console.log(b);
+
+// arr.forEach(element => {
+//   if (element%3==0){
+//     console.log("Fizz");
+//   } else if (element%5==0) {
+//     console.log("Buzz");
+//   } else {
+//     console.log("FizzBuzz");
+//   } 
+// });
+
+
+// let result = [];
+// arr.forEach((element, index, a) => {
+//   if (element%3==0){
+//    a[index]="Fizz";
+//   } else if (element%5==0) {
+//     result.push("Buzz");
+//   } else {
+//     result.push("FizzBuzz");
+//   }
+//  });
+// console.log(result);
+
+
+    
+  
+
+
+// let result = console.log(array(y));
+  
 
 /* EXPECTED OUTPUT */
 
