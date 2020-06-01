@@ -12,7 +12,9 @@ let house = {
       lastName: "Conway"
     }
 };
-
+let newAddress = house.address = "51 Berkley Road";
+let newPrevOwners = house.previousOwners = ["Brian M.", "Fiona S."];
+let newHouseCurrentOwner = house.currentOwner.lastName =  "Montgomery";
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
 

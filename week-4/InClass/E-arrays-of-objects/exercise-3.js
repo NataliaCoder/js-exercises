@@ -53,7 +53,14 @@ let restaurants = [restaurant1, restaurant2, restaurant3];
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
-
+let restaurantsAvailableFor5People = restaurants.filter(seatsForPeople).map(availRest);
+function seatsForPeople(restaurant){
+  return restaurant.totalSeats>=5; 
+}
+function availRest(restaurant){
+  return restaurant.name;
+}
+console.log(restaurantsAvailableFor5People);
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
