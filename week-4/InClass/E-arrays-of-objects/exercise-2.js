@@ -39,34 +39,36 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
-let destinationNamesWithin500Kms = travelDestinations.filter(isLessThan500).map(destinName);
+// let destinationNamesWithin500Kms = travelDestinations.filter(isLessThan500).map(destinName);
 
-function isLessThan500(destination){
-    return destination.distanceKms<=500;
-}
+// function isLessThan500(destination){
+//     return destination.distanceKms<=500;
+// }
 
-function destinName(destination){
-    return destination.destinationName;
-}
+// function destinName(destination){
+//     return destination.destinationName;
+// }
 
-let destinationNameReachableByFerry = travelDestinations.filter(includesFerry).map(destinName1);// Complete here
-function includesFerry(destination){
-    return destination.transportations.includes("ferry");
-    }
-function destinName1(transportation){
-    return transportation.destinationName;
-}
+let destinationNamesWithin500Kms = travelDestinations.filter(destination => destination.distanceKms<=500).map(destination => destination.destinationName);
+let destinationNameReachableByFerry = travelDestinations.filter(destination => destination.transportations.includes("ferry")).map(transportation => transportation.destinationName);
 
+// let destinationNameReachableByFerry = travelDestinations.filter(includesFerry).map(destinName1);// Complete here
+// function includesFerry(destination){
+//     return destination.transportations.includes("ferry");
+//     }
+// function destinName1(transportation){
+//     return transportation.destinationName;
+// }
 
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(destination => destination.distanceKms>=300 && destination.transportations.includes("train")).map(destination => destination.destinationName);// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
-
-let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(kmsByTrain).map(destinName2);// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
-function kmsByTrain(destination){
-    return destination.distanceKms>=300 && destination.transportations.includes("train");
-}
-function destinName2(destination){
-    return destination.destinationName;
-}
+// let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(kmsByTrain).map(destinName2);// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+// function kmsByTrain(destination){
+//     return destination.distanceKms>=300 && destination.transportations.includes("train");
+// }
+// function destinName2(destination){
+//     return destination.destinationName;
+// }
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */

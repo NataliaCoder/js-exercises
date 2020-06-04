@@ -43,14 +43,14 @@ console.log("Is my food low calorie? " + isLowCalorie(myFavFood))
 
 // 3. Declare a function "isSafeForNutAllergies" that accepts "food" as a parameter
 // and returns false if it found the word "sesame" in the ingredients, or true otherwise
+//   ingredients: ["chickpeas", "cumin", "oil", "sesame seeds", "tahini sauce"],
 
 function isSafeForNutAllergies(food) {
-  return food.ingredients.some(contSesame);
+  // return food.ingredients.every( str => str.toLowerCase().search("ssesame") === -1) ;
+  return !food.ingredients.some( str => str.toLowerCase().search("sesame") > -1) ;
+
 } 
 
-function contSesame(str){
-  return str.ingredients.includes("sesame");
-}
 console.log(
   "Is my favorite food nut allergy safe? ",
   isSafeForNutAllergies(myFavFood)

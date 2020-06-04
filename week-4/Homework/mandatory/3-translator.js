@@ -25,11 +25,19 @@ and returns the greeting for that language - if it exists in your "languages" ob
 It should default to English if the language is not in your object of languages, 
 or in the event of an invalid input.
 */
+// Irish
 
 function greet(language) {
-  //write your code here
-}
+  language = language.toLowerCase();
+  if (Object.keys(languages).includes(language)) {
+  return languages[language];//write your code here
+ }{
+  return languages["english"];
+ }
+};
 
+
+console.log(greet("Irish"));
 /*
 Test your function works correctly calling it inside a console.log(), for each one of these cases:
 

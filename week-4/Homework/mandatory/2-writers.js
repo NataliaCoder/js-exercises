@@ -35,10 +35,27 @@ let writers = [
     lastName: "hooks",
     occupation: "writer",
     age: 64,
-    alive: true,
-  },
+    alive: true
+  }
 ];
-console.log('"Hi, my name is " + writer.firstName + writer.lastName + "." + " I am " + writer.age + "years old, and work as a " writer.occupation + "."');
-/*
-If you want an extra challenge, only `console.log()` the writers that are alive.
-*/
+// map
+// forEach
+// for(i=0; i<writers.length; i++){
+//   console.log("Hi, my name is " + 
+//    writers[i].firstName + " " +   
+//    writers[i].lastName + "." +" I am " + 
+//    writers[i].age + " years old, and work as a " + 
+//    writers[i].occupation +".")
+// };
+writers.forEach(writer => {
+    console.log("Hi, my name is " + 
+    writer.firstName + " " +   
+    writer.lastName + "." +" I am " + 
+    writer.age + " years old, and work as a " + 
+    writer.occupation +".")
+});
+
+// If you want an extra challenge, only `console.log()` the writers that are alive.
+
+writersAlive = writers.filter(writer => writer.alive === true).map(writer => writer.firstName + " " + writer.lastName);
+console.log(writersAlive);
