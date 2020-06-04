@@ -5,7 +5,6 @@
   - one that adds 2 numbers together
   - one that multiplies 2 numbers together
   - one that formats a number so it's returned as a string with a £ sign before it (e.g. 20 -> £20)
-
   2. Using the variable startingValue as input, perform the following operations using your functions all
   on one line (assign the result to the variable badCode):
   - add 10 to startingValue
@@ -17,25 +16,27 @@
 */
 
 function add(a, b) {
-return a+b;
+  let sum = Math.round((a + b) * 10) / 10;
+  return sum;
 }
 
 function multiply(a, b) {
-return a*b
+  return a * b;
 }
 
-function format(price) {
-return "£" + price;
+function format(c) {
+  return "£" + c;
 }
 
-const startingValue = 2;
-
+const startingValue = 2
+addValue = add(startingValue, 10);
+multiplyValue = multiply(addValue, 2);
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = "£" + multiplyValue;
 
 /* BETTER PRACTICE */
 
-let goodCode = "£" + startingValue;
+let goodCode = format(multiplyValue);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
