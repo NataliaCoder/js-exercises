@@ -18,12 +18,3 @@ if (groupIsOnlyStudents) {
 /* EXPECTED RESULT */
 
 // The group does not contain only students
-
-// var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley"];
-// function isAboveThreshold(name) {
-//   return name.length > 3;
-// }
-// var studentNameLength = students.every(isAboveThreshold);
-
-// console.log(studentNameLength); // logs true
-
