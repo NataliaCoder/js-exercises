@@ -36,9 +36,9 @@ console.log("Is my favorite vegetarian? " + isVeggie(myFavFood));
 // write your own console.log() that calls the function to test it, as in the examples above!
 // no example code is provided here!
 function isLowCalorie(food){
-  return food.caloriesPerPortion<=600;
+  return food.caloriesPerPortion<600;
 }
-console.log("Is my food low calorie? " + isLowCalorie(myFavFood))
+console.log("Is my food low calorie? " + isLowCalorie(myFavFood));
 //---------------------------------------
 
 // 3. Declare a function "isSafeForNutAllergies" that accepts "food" as a parameter
@@ -46,9 +46,7 @@ console.log("Is my food low calorie? " + isLowCalorie(myFavFood))
 //   ingredients: ["chickpeas", "cumin", "oil", "sesame seeds", "tahini sauce"],
 
 function isSafeForNutAllergies(food) {
-  // return food.ingredients.every( str => str.toLowerCase().search("ssesame") === -1) ;
   return !food.ingredients.some( str => str.toLowerCase().search("sesame") > -1) ;
-
 } 
 
 console.log(
