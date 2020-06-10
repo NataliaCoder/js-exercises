@@ -81,4 +81,14 @@ document.querySelectorAll("a").forEach((element) =>
 
 
 
+/*
+When the 'Larger links!' button is clicked, the text of all links on the page should increase.
+*/
 
+/*
+Task 6
+======
+
+Using JavaScript, create an unordered list under the "Add" button.
+When the "Add" button is pressed, get the value of the text box on its left, and add it to the list you created above.
+*/

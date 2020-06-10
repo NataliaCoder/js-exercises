@@ -34,20 +34,24 @@ function exerciseOne(arrayOfPeople) {
  */
 
 
+
   //Write your code in here
 
 
 function exerciseTwo(shopping) {
   let newContent = document.querySelector("#content");
-let ul = document.createElement("ul");
-newContent.appendChild(ul);
+  let ul = document.createElement("ul");
+  
+  newContent.appendChild(ul);
+
   for( i=0; i<shopping.length; i++) {
     let li = document.createElement("li");
     ul.appendChild(li);
-li.innerText = shopping[i];
+  li.innerText = shopping[i];
 
+} 
 }
-}
+
 /**
     I'd like to display my three favorite books inside a nice webpage!
 
@@ -55,20 +59,20 @@ li.innerText = shopping[i];
         {
             title: "The Design of Everyday Things",
             author: "Don Norman",
-            alreadyRead: false
-            cover: https://files.slack.com/files-pri/T2H71EFLK-F014QG1KXBR/design_of_things.jpeg
+            alreadyRead: false,
+            coverImageUrl: "assets/design_of_things.jpeg"
         },
         {
             title: "The Most Human Human",
             author: "Brian Christian",
-            alreadyRead: true
-            cover: https://files.slack.com/files-pri/T2H71EFLK-F0153SR3H7X/most_human_human.jpeg
+            alreadyRead: true,
+            coverImageUrl: "assets/most_human_human.jpeg"
         },
         {
             title: "The Pragmatic Programmer",
             author: "Andrew Hunt",
-            alreadyRead: true
-            cover: https://files.slack.com/files-pri/T2H71EFLK-F015HSTKDH7/pragmatic_programmer.jpeg
+            alreadyRead: true,
+            coverImageUrl: "assets/pragmatic_programmer.jpeg"
         }
     ];
 
@@ -111,7 +115,7 @@ html.href = "https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things";
 let people = [
   { name: "Chris", job: "Teacher" },
   { name: "Joanna", job: "Student" },
-  { name: "Boris", job: "Prime Minister" }
+  { name: "Boris", job: "Prime Minister" },
 ];
 
 exerciseOne(people);
@@ -124,18 +128,21 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
+    coverImageUrl: "assets/design_of_things.jpeg",
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
+    coverImageUrl: "assets/most_human_human.jpeg",
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
-  }
+    alreadyRead: true,
+    coverImageUrl: "assets/pragmatic_programmer.jpeg",
+  },
 ];
 
 exerciseThree(books);
