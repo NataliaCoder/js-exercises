@@ -15,8 +15,16 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-}
-
+  for( i=0; i<arrayOfPeople.length; i++) {
+     let name = document.createElement("h1");
+     name.innerText = people[i].name;
+    content.appendChild(name);
+    let job = document.createElement("h2");
+    job.innerText = people[i].job;
+     content.appendChild(job);
+  }
+};
+  
 /**
  *
  * Create a list of shopping items. You should use an unordered list.
@@ -24,10 +32,22 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
-  //Write your code in here
-}
 
+
+  //Write your code in here
+
+
+function exerciseTwo(shopping) {
+  let newContent = document.querySelector("#content");
+let ul = document.createElement("ul");
+newContent.appendChild(ul);
+  for( i=0; i<shopping.length; i++) {
+    let li = document.createElement("li");
+    ul.appendChild(li);
+li.innerText = shopping[i];
+
+}
+}
 /**
     I'd like to display my three favorite books inside a nice webpage!
 
@@ -36,16 +56,19 @@ function exerciseTwo(shopping) {
             title: "The Design of Everyday Things",
             author: "Don Norman",
             alreadyRead: false
+            cover: https://files.slack.com/files-pri/T2H71EFLK-F014QG1KXBR/design_of_things.jpeg
         },
         {
             title: "The Most Human Human",
             author: "Brian Christian",
             alreadyRead: true
+            cover: https://files.slack.com/files-pri/T2H71EFLK-F0153SR3H7X/most_human_human.jpeg
         },
         {
             title: "The Pragmatic Programmer",
             author: "Andrew Hunt",
             alreadyRead: true
+            cover: https://files.slack.com/files-pri/T2H71EFLK-F015HSTKDH7/pragmatic_programmer.jpeg
         }
     ];
 
@@ -58,9 +81,23 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-  //Write your code in here
+  for(i=0; i<books.length; i++) {
+  let page = document.querySelector("body");//Write your code in here
+let par = document.createElement("p");
+  page.appendChild(par);
+ulNew = document.createElement("ul");
+  par.appendChild(ulNew);
+liNew = document.createElement("li");
+  ulNew.appendChild(liNew);
+    liNew.innerText = books[i].title + " " + books[i].author;
+img = document.createElement("img");
+par.appendChild(img);
+img.src = "https://i.ebayimg.com/images/g/qMYAAOSwlj9d4DzJ/s-l1600.png";
+html = document.createElement("html");
+img.appendChild(html);
+html.href = "https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things";
 }
-
+}
 //
 //
 //

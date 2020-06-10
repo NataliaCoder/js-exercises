@@ -82,7 +82,7 @@ To retrieve an array of multiple elements (that match a specific class name for 
     //change the background of all the paragraph items on our page
     var paragraphs = document.querySelectorAll('p');
     for(var i=0; i<paragraphs.length; i++) {
-        paragraphs[i].style.backgroundColor = "blue";
+        paragraphs[i].style.backgroundColor = random["blue", "pink"];
     }
 ```
 
