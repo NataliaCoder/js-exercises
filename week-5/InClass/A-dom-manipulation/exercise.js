@@ -78,17 +78,36 @@ document.querySelectorAll("a").forEach((element) =>
 }); 
 }
 
-
-
-
-/*
-When the 'Larger links!' button is clicked, the text of all links on the page should increase.
-*/
-
 /*
 Task 6
 ======
 
 Using JavaScript, create an unordered list under the "Add" button.
-When the "Add" button is pressed, get the value of the text box on its left, and add it to the list you created above.
+When the "Add" button is pressed, get the value of the text box on 
+its left, and add it to the list you created above.
 */
+
+let addFunction= document.querySelector("#addArticleBtn");
+addFunction.addEventListener("click", createUnorderedList);
+
+function createUnorderedList(){
+let input = document.querySelector(".form-control.addArticle"); 
+let title = input.value; 
+if(document.querySelector(".unlist") === null) {
+let newUl = document.createElement("ul");
+newUl.className = "unlist";
+let newPlace = document.querySelector(".buttons")
+newPlace.appendChild(newUl);
+let newLi = document.createElement("li");
+newUl.appendChild(newLi);
+newLi.innerText = title; 
+return;
+} else {
+let input = document.querySelector(".addArticle");
+let title = input.value; 
+let newPlace = document.querySelector(".unlist");    
+let newLi = document.createElement("li");
+newPlace.appendChild(newLi);
+newLi.innerText = title; 
+}
+}

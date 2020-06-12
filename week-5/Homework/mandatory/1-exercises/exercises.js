@@ -14,14 +14,14 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
-  for( i=0; i<arrayOfPeople.length; i++) {
-     let name = document.createElement("h1");
-     name.innerText = people[i].name;
-    content.appendChild(name);
-    let job = document.createElement("h2");
-    job.innerText = people[i].job;
-     content.appendChild(job);
+let content = document.querySelector("#content");
+for( i=0; i<arrayOfPeople.length; i++) {
+let name = document.createElement("h1");
+name.innerText = people[i].name;
+content.appendChild(name);
+let job = document.createElement("h2");
+job.innerText = people[i].job;
+content.appendChild(job);
   }
 };
   
@@ -33,22 +33,16 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 
-
-
-  //Write your code in here
-
-
 function exerciseTwo(shopping) {
-  let newContent = document.querySelector("#content");
-  let ul = document.createElement("ul");
+let newContent = document.querySelector("#content");
+let ul = document.createElement("ul");
   
-  newContent.appendChild(ul);
+newContent.appendChild(ul);
 
-  for( i=0; i<shopping.length; i++) {
-    let li = document.createElement("li");
-    ul.appendChild(li);
-  li.innerText = shopping[i];
-
+for( i=0; i<shopping.length; i++) {
+let li = document.createElement("li");
+ul.appendChild(li);
+li.innerText = shopping[i];
 } 
 }
 
@@ -85,21 +79,39 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-  for(i=0; i<books.length; i++) {
-  let page = document.querySelector("body");//Write your code in here
+let page = document.querySelector("body");//Write your code in here
+
+let ulNew = document.createElement("ul");
+page.appendChild(ulNew);
+  // ulNew.className = "ulNewClass";
+
+ulNew.style.listStyle = "none";
+ulNew.style.display = "flex";
+ulNew.style.flexWrap = "wrap";
+ulNew.style.padding = "20px";
+ulNew.style.width = "calc( 100% - 41px)";
+
+for(i=0; i<books.length; i++) {
+    
+let liNew = document.createElement("li");
+ulNew.appendChild(liNew);
+  
+liNew.style.width = "calc(25% - 51px)";
+liNew.style.margin = "15px";
+liNew.style.padding = "10px";
+liNew.style.minWidth = "350px";
+
 let par = document.createElement("p");
-  page.appendChild(par);
-ulNew = document.createElement("ul");
-  par.appendChild(ulNew);
-liNew = document.createElement("li");
-  ulNew.appendChild(liNew);
-    liNew.innerText = books[i].title + " " + books[i].author;
-img = document.createElement("img");
-par.appendChild(img);
-img.src = "https://i.ebayimg.com/images/g/qMYAAOSwlj9d4DzJ/s-l1600.png";
-html = document.createElement("html");
-img.appendChild(html);
-html.href = "https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things";
+liNew.appendChild(par);
+par.innerText = books[i].title + " " + books[i].author;
+let image = document.createElement("img");
+liNew.appendChild(image);
+image.src = books[i].coverImageUrl;
+if (books[i].alreadyRead === true) {
+liNew.style.backgroundColor = "green";
+} else 
+{ liNew.style.backgroundColor = "red";
+}
 }
 }
 //
