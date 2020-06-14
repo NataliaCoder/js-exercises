@@ -10,3 +10,12 @@ Update your code to make the colour change every 5 seconds to something differen
 
 ================
 */
+setTimeout
+(function(){
+document.body.style.background = "blue";
+}, 5000);
+
+setInterval
+(){
+    
+}
