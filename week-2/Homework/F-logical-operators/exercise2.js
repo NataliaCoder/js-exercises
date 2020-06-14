@@ -7,27 +7,26 @@
 
 function isNegative(number) {
   if (number < 0) {
-    return "true";
-  } return "false";
+    return true;
+  } return false;
 } 
 function isBetween5and10(number) {
 if (number > 5 && number <=10) {
-  return "true";
-} return "false";
+  return true;
+} return false;
 }
 function isShortName(name) {
   if (name === "Daniel") {
-    return "true";
-  } return "false";
+    return true;
+  } return false;
 }
 function startsWithD(name) {
-  if (name[0] === "D") {
-    return "true";
-  } return "false";
+  if (name.substring(0,1) === "D") {
+    return true;
+  } return false;
 }  
 console.log(isNegative(-10));
 console.log(isNegative(5));
-
 
 /* 
   DO NOT EDIT BELOW THIS LINE

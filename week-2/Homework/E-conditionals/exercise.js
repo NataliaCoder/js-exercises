@@ -9,9 +9,9 @@
 var name = "Daniel";
 var danielsRole = "mentor";
 function ifMentor(name, danielsRole) {
-  if (danielsRole = "mentor") {
+  if (danielsRole === "mentor") {
   return "Hi, I'm " + name + "," + "I'm a mentor.";}
-  else if (danielsRole = "student") {
+  else if (danielsRole === "student") {
     return "Hi, I'm " + name + "," + "I'm a student.";
   }
 }
