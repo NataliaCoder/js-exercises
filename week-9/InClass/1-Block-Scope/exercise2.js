@@ -6,16 +6,18 @@
   4. BONUS: change the "car" variable, and move the console.log() to a different line, so it logs "Richard"
 */
 
-console.log(driverName);
 
-let car = "BMW";
+
+let car = "BM";
 let driverName = "Astrid";
-
 if (car === "BMW") {
   let driverName = "Reyam";
   let carModel = "4 Series";
+
 } else {
   let driverName = "Richard";
+  console.log(driverName);
 }
 
 driverName = "Awet";
+

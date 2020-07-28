@@ -19,5 +19,6 @@ let myName = "Marissa";
 
 // ONLY CHANGE CODE ON LINE 21
 let greeting = greet();
-
+console.log(greeting);
+console.log(greeting);
 console.log(greeting);

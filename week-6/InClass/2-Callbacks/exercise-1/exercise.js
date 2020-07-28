@@ -10,3 +10,6 @@ Update your code to make the colour change every 5 seconds to something differen
 
 ================
 */
+let numbers = [1, -3, 8, 5];
+let filtered = numbers.filter(function(element) { return element>=0});
+console.log(filtered);
